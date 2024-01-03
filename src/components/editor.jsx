@@ -6,9 +6,13 @@ import {
   deleteElement,
   changeElement,
   insertElement,
+  updateAllElements,
 } from "../redux/actions.js";
 
 export default function Editor() {
+  const [background, setBackground] = useState(
+    localStorage.getItem("background")
+  );
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   useEffect(() => {}, [state]);
@@ -19,7 +23,10 @@ export default function Editor() {
         type="text"
         placeholder="background"
         className="background"
+        value={background}
         onChange={(e) => {
+          localStorage.setItem("background", e.target.value);
+          setBackground(e.target.value);
           document.querySelector(".preview-container").style.background =
             e.target.value;
         }}
@@ -27,6 +34,7 @@ export default function Editor() {
       <input
         type="text"
         placeholder="padding"
+        style={{ marginBottom: "3rem" }}
         onChange={(e) => {
           document.querySelector(".preview-container").style.padding =
             e.target.value;
@@ -77,6 +85,26 @@ export default function Editor() {
       >
         COPIAR
       </button>
+
+      <p style={{ color: "white" }}>
+        Introduce tu codigo JSON para convertirlo y editar.
+      </p>
+
+      <textarea
+        name=""
+        id=""
+        className="json"
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+        }}
+        placeholder="Introduce tu codigo JSON para convertirlo y editar."
+        value={
+          state?.slider_content ? JSON.stringify(state?.slider_content) : ""
+        }
+        onChange={(e) => {
+          dispatch(updateAllElements(e.target.value));
+        }}
+      ></textarea>
     </div>
   );
 }
@@ -116,6 +144,7 @@ const form = (element, ind) => {
       <select
         name="element_type"
         id="element_tyoe"
+        value={element.element_type}
         onChange={(e) => {
           dispatch(changeElement("element_type", e.target.value, element.code));
         }}
@@ -135,6 +164,7 @@ const form = (element, ind) => {
         type="text"
         name="element_color"
         placeholder="element_color"
+        value={element.element_color}
         onChange={(e) => {
           dispatch(
             changeElement("element_color", e.target.value, element.code)
@@ -145,6 +175,7 @@ const form = (element, ind) => {
         type="text"
         name="element_additional_class"
         placeholder="element_additional_class"
+        value={element.element_additional_class}
         onChange={(e) => {
           dispatch(
             changeElement(
@@ -159,6 +190,7 @@ const form = (element, ind) => {
         type="text"
         name="element_additional_css"
         placeholder="element_additional_css"
+        value={element.element_additional_css}
         onChange={(e) => {
           dispatch(
             changeElement(
@@ -173,6 +205,7 @@ const form = (element, ind) => {
         type="text"
         name="element_sort"
         placeholder="element_sort"
+        value={element.element_sort}
         onChange={(e) => {
           dispatch(changeElement("element_sort", e.target.value, element.code));
         }}
@@ -181,6 +214,7 @@ const form = (element, ind) => {
         type="text"
         name="element_position"
         placeholder="element_position"
+        value={element.element_position}
         onChange={(e) => {
           dispatch(
             changeElement("element_position", e.target.value, element.code)
@@ -190,6 +224,7 @@ const form = (element, ind) => {
       <input
         type="text"
         name="element_effect_direction"
+        value={element.element_effect_direction}
         placeholder="element_effect_direction"
         onChange={(e) => {
           dispatch(
@@ -205,6 +240,7 @@ const form = (element, ind) => {
         type="text"
         name="element_effect_duration"
         placeholder="element_effect_duration"
+        value={element.element_effect_duration}
         onChange={(e) => {
           dispatch(
             changeElement(
@@ -220,6 +256,7 @@ const form = (element, ind) => {
         name="element_content"
         placeholder="element_content"
         className="fill-col"
+        value={element.element_content}
         onChange={(e) => {
           dispatch(
             changeElement("element_content", e.target.value, element.code)

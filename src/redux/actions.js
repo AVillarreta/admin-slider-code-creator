@@ -82,3 +82,12 @@ export function insertElement(code) {
     });
   };
 }
+
+export function updateAllElements(elements) {
+  return (dispatch) => {
+    return dispatch({
+      type: "UPDATE_ALL_ELEMENTS",
+      payload: elements,
+    });
+  };
+}

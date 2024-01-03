@@ -1,5 +1,6 @@
 const initialState = {
   slider_content: [],
+  image_directory: "",
 };
 
 export default function reducer(state = initialState, action) {
@@ -49,7 +50,18 @@ export default function reducer(state = initialState, action) {
           action.payload.code
         ),
       };
+    case "UPDATE_ALL_ELEMENTS":
+      return {
+        ...state,
+        slider_content: JSON.parse(action.payload),
+      };
   }
+}
+
+function selectElement(elements, code) {
+  return elements.find((element) => {
+    console.log(element);
+  });
 }
 
 function recursiveMap(elements, name, value, code) {

@@ -15,7 +15,12 @@ export default function Preview() {
 
   return (
     <div key={state?.slider_content.lenght} className="content-container">
-      <div className="preview-container">{renderedContent}</div>
+      <div
+        className="preview-container"
+        style={{ background: localStorage.getItem("background") }}
+      >
+        {renderedContent}
+      </div>
     </div>
   );
 }
@@ -136,11 +141,12 @@ function type_element(element) {
           {print_element(element)}
         </p>
       );
-    case "image":
+    case "img":
       return (
         <img
-          srcSet={element.element_content}
+          srcSet={localStorage.getItem("image_url") + element.element_content}
           className={`scrollE ${element?.element_additional_class}`}
+          alt={element.element_content}
           key={element.id}
           style={{
             ...parseStyles(element?.element_additional_css),
@@ -152,9 +158,7 @@ function type_element(element) {
                 }
               : {}),
           }}
-        >
-          {print_element(element)}
-        </img>
+        />
       );
     case "list":
       return (
