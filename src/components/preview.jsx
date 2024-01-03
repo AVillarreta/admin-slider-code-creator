@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 export default function Preview() {
   const state = useSelector((state) => state);
-  const [renderedContent, setRenderedContent] = useState("");
+  const [renderedContent, setRenderedContent] = useState([]);
   useEffect(() => {
-    const contentArray = state.slider_content
+    const contentArray = state?.slider_content
       ?.map((element, index) => {
         return type_element(element, index);
       })
@@ -14,8 +14,8 @@ export default function Preview() {
   }, [state]);
 
   return (
-    <div key={state.slider_content.lenght} className="preview-container">
-      {renderedContent}
+    <div key={state?.slider_content.lenght} className="content-container">
+      <div className="preview-container">{renderedContent}</div>
     </div>
   );
 }

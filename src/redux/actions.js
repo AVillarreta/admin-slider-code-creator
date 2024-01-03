@@ -1,4 +1,4 @@
-export function handleChange(name, value, position = null, index = 0) {
+/* export function handleChange(name, value, position = null, index = 0) {
   return (dispatch) => {
     if (value[0] == "[" && value[value.length - 1] == "]") {
       value = JSON.parse(value);
@@ -32,6 +32,53 @@ export function newElement(element) {
       type: "NEW_ELEMENT",
       payload: {
         element,
+      },
+    });
+  };
+}
+ */
+export function createElement(code) {
+  return (dispatch) => {
+    console.log(code);
+    return dispatch({
+      type: "CREATE_ELEMENT",
+      payload: {
+        code,
+      },
+    });
+  };
+}
+
+export function deleteElement(code) {
+  return (dispatch) => {
+    return dispatch({
+      type: "DELETE_ELEMENT",
+      payload: {
+        code,
+      },
+    });
+  };
+}
+
+export function changeElement(name, value, code) {
+  return (dispatch) => {
+    return dispatch({
+      type: "CHANGE_ELEMENT",
+      payload: {
+        name,
+        value,
+        code,
+      },
+    });
+  };
+}
+
+export function insertElement(code) {
+  return (dispatch) => {
+    return dispatch({
+      type: "INSERT_ELEMENT",
+      payload: {
+        code,
       },
     });
   };
