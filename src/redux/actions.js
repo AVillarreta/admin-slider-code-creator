@@ -39,7 +39,6 @@ export function newElement(element) {
  */
 export function createElement(code) {
   return (dispatch) => {
-    console.log(code);
     return dispatch({
       type: "CREATE_ELEMENT",
       payload: {

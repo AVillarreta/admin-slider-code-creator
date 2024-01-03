@@ -48,8 +48,11 @@
   align-items: center;
   justify-content: center;
 }
-.editor-container > div > input {
+.editor-container > input {
+  margin: 0.25rem 0;
   border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
   width: 90%;
   border-radius: 5px;
   box-sizing: border-box;
@@ -74,6 +77,8 @@
 }
 .form-editor input,
 .form-editor select {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
   border: none;
   border-radius: 5px;
   box-sizing: border-box;
@@ -100,6 +105,8 @@
   transition: all 0.2s ease;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 .btn:hover {
   cursor: pointer;
@@ -130,4 +137,9 @@
 .close:hover {
   cursor: pointer;
   color: red;
+}
+
+option {
+  color: black;
+  background: rgba(255, 255, 255, 0.2);
 }

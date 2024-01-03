@@ -69,7 +69,6 @@ function recursiveMap(elements, name, value, code) {
     } else {
       // Si element_content no es un array, realizar cambios según tus condiciones
       if (element.code === code) {
-        console.log(15);
         // Cambiar según tus necesidades, por ejemplo, actualizando name y value
         const updatedElement = {
           ...element,
@@ -150,14 +149,11 @@ function insertElement(elements, code) {
   switch (action.type) {
     case "CHANGE":
       let newState = { ...state };
-      console.log(action.payload);
       let array = Array.isArray(
         state.slider_content[action.payload.index].element_content
       )
         ? [...state.slider_content[action.payload.index].element_content]
         : [];
-
-      console.log(array);
 
       newState.slider_content[action.payload.index][action.payload.name] =
         action.payload.value;
@@ -172,7 +168,6 @@ function insertElement(elements, code) {
         let element_content = state.slider_content.element_content;
         let array = [...element_content];
         let res = array.push(action.payload.string);
-        console.log(string);
         return {
           ...state,
           element_content: JSON.parse(res),

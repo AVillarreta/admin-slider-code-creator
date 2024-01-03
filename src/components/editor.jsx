@@ -11,30 +11,29 @@ import {
 export default function Editor() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
+  useEffect(() => {}, [state]);
 
   return (
     <div className="editor-container">
+      <input
+        type="text"
+        placeholder="background"
+        className="background"
+        onChange={(e) => {
+          document.querySelector(".preview-container").style.background =
+            e.target.value;
+        }}
+      />
+      <input
+        type="text"
+        placeholder="padding"
+        onChange={(e) => {
+          document.querySelector(".preview-container").style.padding =
+            e.target.value;
+        }}
+      />
       {state?.slider_content ? (
         <div>
-          <input
-            type="text"
-            placeholder="background"
-            onChange={(e) => {
-              document.querySelector(".preview-container").style.background =
-                e.target.value;
-            }}
-          />
-          <input
-            type="text"
-            placeholder="padding"
-            onChange={(e) => {
-              document.querySelector(".preview-container").style.padding =
-                e.target.value;
-            }}
-          />
           {state?.slider_content?.map((element, ind) => form(element, ind))}
           <input
             type="submit"

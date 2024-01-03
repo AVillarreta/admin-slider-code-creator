@@ -1,7 +1,6 @@
 /* import reducer from "./reducer.js";
 import { createStore } from "redux";
 import * as thunk from "redux-thunk";
-console.log(thunk);
 
 const store = createStore(reducer);
 
