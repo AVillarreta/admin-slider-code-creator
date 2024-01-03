@@ -115,44 +115,23 @@ function insertElement(elements, code) {
   return elements.map((element) => {
     if (element.code === code) {
       // Si encuentra el elemento con el código, inserta el nuevo objeto en element_content
-      let newElementContent;
-      if (Array.isArray(element.element_content)) {
-        // Si element_content es un array, añadir el nuevo objeto
-        newElementContent = [
-          {
-            element_type: "",
-            element_content: "",
-            element_color: "",
-            element_additional_class: "",
-            element_additional_css: "",
-            element_sort: "1",
-            element_position: "",
-            element_effect_direction: "bottom",
-            element_effect_duration: "400",
-            code: Math.floor(Math.random() * 1000).toString(),
-          },
-        ];
-      } else {
-        // Si element_content no es un array, establecer un nuevo array con el nuevo objeto
-        newElementContent = [
-          {
-            element_type: "",
-            element_content: "",
-            element_color: "",
-            element_additional_class: "",
-            element_additional_css: "",
-            element_sort: "1",
-            element_position: "",
-            element_effect_direction: "bottom",
-            element_effect_duration: "400",
-            code: Math.floor(Math.random() * 1000).toString(),
-          },
-        ];
-      }
-
       return {
         ...element,
-        element_content: newElementContent,
+        element_content: [
+          ...(element.element_content || []), // Asegura que element_content sea un array
+          {
+            element_type: "",
+            element_content: "",
+            element_color: "",
+            element_additional_class: "",
+            element_additional_css: "",
+            element_sort: "1",
+            element_position: "",
+            element_effect_direction: "bottom",
+            element_effect_duration: "400",
+            code: Math.floor(Math.random() * 1000).toString(),
+          },
+        ],
       };
     } else if (Array.isArray(element.element_content)) {
       // Si element_content es un array, aplicar recursión

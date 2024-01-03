@@ -26,7 +26,6 @@ export default function Editor() {
               document.querySelector(".preview-container").style.background =
                 e.target.value;
             }}
-            value={""}
           />
           <input
             type="text"
@@ -73,9 +72,24 @@ export default function Editor() {
           .split("}")
           .join("\n}")}
       ></textarea>
+      <button
+        className="fill-col btn"
+        onClick={() => copiarContenido(state.slider_content)}
+      >
+        COPIAR
+      </button>
     </div>
   );
 }
+
+const copiarContenido = async (text) => {
+  try {
+    await navigator.clipboard.writeText(JSON.stringify(text));
+    window.alert("Contenido copiado al portapapeles");
+  } catch (err) {
+    window.alert("Error al copiar: ", err);
+  }
+};
 
 const form = (element, ind) => {
   const dispatch = useDispatch();
@@ -109,9 +123,13 @@ const form = (element, ind) => {
       >
         <option value="">element_type</option>
         <option value="div">div</option>
+        <option value="h1-title">h1-title</option>
         <option value="h1">h1</option>
         <option value="h2">h2</option>
+        <option value="span">span</option>
         <option value="p">p</option>
+        <option value="img">image</option>
+
         <option value="list">list</option>
       </select>
       <input
@@ -228,60 +246,3 @@ const form = (element, ind) => {
     </form>
   );
 };
-
-/* let position = 0;
-
-const el_type = {
-  element_type: "",
-  element_content: "",
-  element_color: "",
-  element_additional_class: "",
-  element_additional_css: "",
-  element_sort: "1",
-  element_position: "",
-  element_effect_direction: "bottom",
-  element_effect_duration: "400",
-};
-
-export default function Editor() {
-  const dispatch = useDispatch();
-  const element = useSelector((state) => state.slider_content[0]);
-  const state = useSelector((state) => state.slider_content) || [];
-  const [elements, setElements] = useState(state);
-  const [newElements, setNewElements] = useState([]);
-  let num = 0;
-  useEffect(() => {
-    setElements(state);
-    state.map((element) => {
-      if (
-        element.element_content[0] == "[" &&
-        element.element_content[element.element_content.length - 1] == "]"
-      ) {
-        dispatch(
-          handleChange(
-            "element_content",
-            JSON.parse(element.element_content),
-            element.position,
-            element.id
-          )
-        );
-      }
-    });
-  }, [state]);
-  useEffect(() => {
-    if (newElements.length >= 0) {
-      newElements?.map((element) => {
-        dispatch(
-          handleChange(
-            "element_content",
-            JSON.stringify(newElements),
-            position - 1,
-            element.id
-          )
-        );
-      });
-    }
-  }, [newElements]);
-
-  
- */

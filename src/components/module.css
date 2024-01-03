@@ -9,7 +9,13 @@
   width: 360px;
   height: 640px;
   position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
   overflow: hidden;
+}
+.preview-container * {
+  color: #333333;
+  font-family: Klarheit Grotesk Regular, sans-serif;
 }
 .preview-container::after {
   content: "";
