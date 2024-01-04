@@ -1,0 +1,230 @@
+[
+  {
+    "element_type": "div",
+    "element_content": [
+      {
+        "element_type": "div",
+        "element_content": [
+          {
+            "element_type": "image",
+            "element_content": "common/imagenes/slider_content/M3C1/Bullet_2.svg",
+            "element_color": "",
+            "element_additional_class": "",
+            "element_additional_css": "",
+            "element_sort": "1",
+            "element_position": "",
+            "element_effect_direction": "bottom",
+            "element_effect_duration": "400",
+            "code": "9386"
+          }
+        ],
+        "element_color": "",
+        "element_additional_class": "",
+        "element_additional_css": "",
+        "element_sort": "1",
+        "element_position": "",
+        "element_effect_direction": "bottom",
+        "element_effect_duration": "400",
+        "code": "7410"
+      },
+      {
+        "element_type": "div",
+        "element_content": [
+          {
+            "element_type": "p",
+            "element_content": [
+              {
+                "element_type": "span",
+                "element_content": "Give personal phone to  customer to scan QR code  and complete application.",
+                "element_color": "white",
+                "element_additional_class": "k2-title-text-small",
+                "element_additional_css": "",
+                "element_sort": "1",
+                "element_position": "",
+                "element_effect_direction": "bottom",
+                "element_effect_duration": "400",
+                "code": "0"
+              }
+            ],
+            "element_color": "",
+            "element_additional_class": "",
+            "element_additional_css": "text-align:left",
+            "element_sort": "1",
+            "element_position": "",
+            "element_effect_direction": "bottom",
+            "element_effect_duration": "400",
+            "code": "1517"
+          }
+        ],
+        "element_color": "",
+        "element_additional_class": "",
+        "element_additional_css": "box-sizing:border-box;padding-left:1rem",
+        "element_sort": "1",
+        "element_position": "",
+        "element_effect_direction": "bottom",
+        "element_effect_duration": "400",
+        "code": "4376"
+      }
+    ],
+    "element_color": "",
+    "element_additional_class": "",
+    "element_additional_css": "width:100%;display:grid;grid-template-columns: 1fr 10fr;margin-bottom:1rem",
+    "element_sort": "1",
+    "element_position": "",
+    "element_effect_direction": "bottom",
+    "element_effect_duration": "400",
+    "code": "2011"
+  },
+  {
+    "element_type": "div",
+    "element_content": [
+      {
+        "element_type": "div",
+        "element_content": [
+          {
+            "element_type": "image",
+            "element_content": "common/imagenes/slider_content/M3C1/Bullet_2.svg",
+            "element_color": "",
+            "element_additional_class": "",
+            "element_additional_css": "",
+            "element_sort": "1",
+            "element_position": "",
+            "element_effect_direction": "bottom",
+            "element_effect_duration": "400",
+            "code": "9836"
+          }
+        ],
+        "element_color": "",
+        "element_additional_class": "",
+        "element_additional_css": "",
+        "element_sort": "1",
+        "element_position": "",
+        "element_effect_direction": "bottom",
+        "element_effect_duration": "400",
+        "code": "7450"
+      },
+      {
+        "element_type": "div",
+        "element_content": [
+          {
+            "element_type": "p",
+            "element_content": [
+              {
+                "element_type": "span",
+                "element_content": "Answer questions about  existing and open Banco  Popular and JetBlue Credit  Card accounts, and disputes. ",
+                "element_color": "white",
+                "element_additional_class": "k2-title-text-small",
+                "element_additional_css": "",
+                "element_sort": "1",
+                "element_position": "",
+                "element_effect_direction": "bottom",
+                "element_effect_duration": "400",
+                "code": "02"
+              }
+            ],
+            "element_color": "",
+            "element_additional_class": "",
+            "element_additional_css": "text-align:left",
+            "element_sort": "1",
+            "element_position": "",
+            "element_effect_direction": "bottom",
+            "element_effect_duration": "400",
+            "code": "117"
+          }
+        ],
+        "element_color": "",
+        "element_additional_class": "",
+        "element_additional_css": "box-sizing:border-box;padding-left:1rem",
+        "element_sort": "1",
+        "element_position": "",
+        "element_effect_direction": "bottom",
+        "element_effect_duration": "400",
+        "code": "4736"
+      }
+    ],
+    "element_color": "",
+    "element_additional_class": "",
+    "element_additional_css": "width:100%;display:grid;grid-template-columns: 1fr 10fr;margin-bottom:1rem",
+    "element_sort": "1",
+    "element_position": "",
+    "element_effect_direction": "bottom",
+    "element_effect_duration": "400",
+    "code": "2021"
+  },
+  {
+    "element_type": "div",
+    "element_content": [
+      {
+        "element_type": "div",
+        "element_content": [
+          {
+            "element_type": "image",
+            "element_content": "common/imagenes/slider_content/M3C1/Bullet_2.svg",
+            "element_color": "",
+            "element_additional_class": "",
+            "element_additional_css": "",
+            "element_sort": "1",
+            "element_position": "",
+            "element_effect_direction": "bottom",
+            "element_effect_duration": "400",
+            "code": "98246"
+          }
+        ],
+        "element_color": "",
+        "element_additional_class": "",
+        "element_additional_css": "",
+        "element_sort": "1",
+        "element_position": "",
+        "element_effect_direction": "bottom",
+        "element_effect_duration": "400",
+        "code": "762440"
+      },
+      {
+        "element_type": "div",
+        "element_content": [
+          {
+            "element_type": "p",
+            "element_content": [
+              {
+                "element_type": "span",
+                "element_content": "Answer any additional  question about the Banco  Popular and JetBlue Credit  Cards besides the basic  benefits of the cards as  established in training.",
+                "element_color": "white",
+                "element_additional_class": "k2-title-text-small",
+                "element_additional_css": "",
+                "element_sort": "1",
+                "element_position": "",
+                "element_effect_direction": "bottom",
+                "element_effect_duration": "400",
+                "code": "024"
+              }
+            ],
+            "element_color": "",
+            "element_additional_class": "",
+            "element_additional_css": "text-align:left",
+            "element_sort": "1",
+            "element_position": "",
+            "element_effect_direction": "bottom",
+            "element_effect_duration": "400",
+            "code": "1724417"
+          }
+        ],
+        "element_color": "",
+        "element_additional_class": "",
+        "element_additional_css": "box-sizing:border-box;padding-left:1rem",
+        "element_sort": "1",
+        "element_position": "",
+        "element_effect_direction": "bottom",
+        "element_effect_duration": "400",
+        "code": "358583"
+      }
+    ],
+    "element_color": "",
+    "element_additional_class": "",
+    "element_additional_css": "width:100%;display:grid;grid-template-columns: 1fr 10fr;margin-bottom:1rem",
+    "element_sort": "1",
+    "element_position": "",
+    "element_effect_direction": "bottom",
+    "element_effect_duration": "400",
+    "code": "203575371"
+  }
+]

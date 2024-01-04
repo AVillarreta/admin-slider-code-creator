@@ -20,6 +20,7 @@ export default function Editor() {
   return (
     <div className="editor-container">
       <input
+        autocomplete="off"
         type="text"
         placeholder="background"
         className="background"
@@ -32,6 +33,7 @@ export default function Editor() {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         placeholder="padding"
         style={{ marginBottom: "3rem" }}
@@ -44,6 +46,7 @@ export default function Editor() {
         <div>
           {state?.slider_content?.map((element, ind) => form(element, ind))}
           <input
+            autocomplete="off"
             type="submit"
             value="Crear nuevo elemento"
             className="fill-col btn"
@@ -57,6 +60,7 @@ export default function Editor() {
       ) : (
         <div>
           <input
+            autocomplete="off"
             type="submit"
             value="Crear nuevo elemento"
             className="fill-col btn"
@@ -99,7 +103,15 @@ export default function Editor() {
         }}
         placeholder="Introduce tu codigo JSON para convertirlo y editar."
         value={
-          state?.slider_content ? JSON.stringify(state?.slider_content) : ""
+          state?.slider_content
+            ? JSON.stringify(state?.slider_content)
+                ?.split(",")
+                .join(",\n  ")
+                .split("{")
+                .join("{\n")
+                .split("}")
+                .join("\n}")
+            : ""
         }
         onChange={(e) => {
           dispatch(updateAllElements(e.target.value));
@@ -128,6 +140,7 @@ const form = (element, ind) => {
       style={{ position: "relative" }}
     >
       <input
+        autocomplete="off"
         type="button"
         className="close"
         value={"X"}
@@ -156,11 +169,13 @@ const form = (element, ind) => {
         <option value="h2">h2</option>
         <option value="span">span</option>
         <option value="p">p</option>
-        <option value="img">image</option>
+        <option value="image">image</option>
+        <option value="canvas">Canvas</option>
 
         <option value="list">list</option>
       </select>
       <input
+        autocomplete="off"
         type="text"
         name="element_color"
         placeholder="element_color"
@@ -172,6 +187,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_additional_class"
         placeholder="element_additional_class"
@@ -187,6 +203,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_additional_css"
         placeholder="element_additional_css"
@@ -202,6 +219,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_sort"
         placeholder="element_sort"
@@ -211,6 +229,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_position"
         placeholder="element_position"
@@ -222,6 +241,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_effect_direction"
         value={element.element_effect_direction}
@@ -237,6 +257,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_effect_duration"
         placeholder="element_effect_duration"
@@ -252,6 +273,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="text"
         name="element_content"
         placeholder="element_content"
@@ -264,6 +286,7 @@ const form = (element, ind) => {
         }}
       />
       <input
+        autocomplete="off"
         type="submit"
         value="Insertar nuevo elemento"
         className="fill-col btn"

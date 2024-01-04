@@ -35,6 +35,12 @@
   margin: 0;
   box-sizing: border-box !important;
 }
+.k2-title-span {
+  font-family: "Klarheit Grotesk Regular", sans-serif;
+  font-size: 5.5vw !important;
+  margin: 0;
+  line-height: normal !important;
+}
 .k2-title-text-small {
   font-family: "Klarheit Grotesk Regular", sans-serif;
   font-size: 5vw !important;
@@ -67,8 +73,11 @@
   .k2-title-text {
     font-size: 1rem !important;
   }
+  .k2-title-span {
+    font-size: 1rem !important;
+  }
   .k2-title-text-small {
-    font-size: 0.7rem !important;
+    font-size: 1rem !important;
   }
 }
 

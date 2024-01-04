@@ -141,10 +141,27 @@ function type_element(element) {
           {print_element(element)}
         </p>
       );
-    case "img":
+    case "canvas":
+      return (
+        <div
+          className={`scrollE k2-title-text-small ${element?.element_additional_class}`}
+          key={element.id}
+          style={{
+            ...parseStyles(element?.element_additional_css),
+            color: element.element_color,
+            ...(element.element_position
+              ? {
+                  position: "absolute",
+                  ...parsePosition(element.element_position),
+                }
+              : {}),
+          }}
+        ></div>
+      );
+    case "image":
       return (
         <img
-          srcSet={localStorage.getItem("image_url") + element.element_content}
+          srcSet={element.element_content}
           className={`scrollE ${element?.element_additional_class}`}
           alt={element.element_content}
           key={element.id}
@@ -182,7 +199,7 @@ function type_element(element) {
     case "span":
       return (
         <span
-          className={`scrollE ${element?.element_additional_class}`}
+          className={`scrollE ${element?.element_additional_class} k2-title-span`}
           key={element.id}
           style={{
             width: "100%",
