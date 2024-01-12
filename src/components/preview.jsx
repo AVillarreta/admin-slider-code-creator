@@ -166,6 +166,8 @@ function type_element(element) {
           alt={element.element_content}
           key={element.id}
           style={{
+            maxHeight: "100%",
+            objectFit: "contain",
             ...parseStyles(element?.element_additional_css),
             color: element.element_color,
             ...(element.element_position
@@ -177,25 +179,7 @@ function type_element(element) {
           }}
         />
       );
-    case "list":
-      return (
-        <p
-          className={`scrollE k2-title-text-small ${element?.element_additional_class}`}
-          key={element.id}
-          style={{
-            ...parseStyles(element?.element_additional_css),
-            color: element.element_color,
-            ...(element.element_position
-              ? {
-                  position: "absolute",
-                  ...parsePosition(element.element_position),
-                }
-              : {}),
-          }}
-        >
-          {print_element(element)}
-        </p>
-      );
+
     case "span":
       return (
         <span
@@ -216,6 +200,63 @@ function type_element(element) {
         >
           {print_element(element)}
         </span>
+      );
+    case "ul":
+      return (
+        <ul
+          className={`scrollE ${element?.element_additional_class}`}
+          key={element.id}
+          style={{
+            ...parseStyles(element?.element_additional_css),
+            color: element.element_color,
+            ...(element.element_position
+              ? {
+                  position: "absolute",
+                  ...parsePosition(element.element_position),
+                }
+              : {}),
+          }}
+        >
+          {print_element(element)}
+        </ul>
+      );
+    case "li":
+      return (
+        <li
+          className={`scrollE ${element?.element_additional_class}`}
+          key={element.id}
+          style={{
+            ...parseStyles(element?.element_additional_css),
+            color: element.element_color,
+            ...(element.element_position
+              ? {
+                  position: "absolute",
+                  ...parsePosition(element.element_position),
+                }
+              : {}),
+          }}
+        >
+          {print_element(element)}
+        </li>
+      );
+    case "list":
+      return (
+        <div
+          className={`scrollE ${element?.element_additional_class} k2-list-item`}
+          key={element.id}
+          style={{
+            ...parseStyles(element?.element_additional_css),
+            color: element.element_color,
+            ...(element.element_position
+              ? {
+                  position: "absolute",
+                  ...parsePosition(element.element_position),
+                }
+              : {}),
+          }}
+        >
+          {print_element(element)}
+        </div>
       );
     default:
       return <div key={element.id}></div>;

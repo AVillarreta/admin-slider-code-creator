@@ -5,44 +5,39 @@
 }
 
 .k2-title-h1-bold {
-  font-family: "Klarheit Grotesk Bold", sans-serif;
-  font-size: 12vw !important;
-  margin: 0;
-}
-.k2-title-h1 {
-  font-family: "Klarheit Grotesk Regular", sans-serif;
-  font-size: 12vw !important;
-  margin: 0;
-}
-.k2-title-h2 {
-  font-family: "Klarheit Grotesk Regular", sans-serif;
+  font-family: "Klarheit Grotesk Bold";
   font-size: 10vw !important;
   margin: 0;
 }
+.k2-title-h1 {
+  font-family: "Klarheit Grotesk Regular";
+  font-size: 10vw !important;
+  margin: 0;
+}
+.k2-title-h2 {
+  font-family: "Klarheit Grotesk Bold";
+  font-size: 9.2vw !important;
+  margin: 0;
+}
 .k2-title-h3-bold {
-  font-family: "Klarheit Grotesk Bold", sans-serif !important;
+  font-family: "Klarheit Grotesk Bold" !important;
   font-size: 8.5vw !important;
   margin: 0;
 }
 .k2-title-h3 {
-  font-family: "Klarheit Grotesk Regular", sans-serif;
+  font-family: "Klarheit Grotesk Regular";
   font-size: 8.5vw !important;
   margin: 0;
 }
 .k2-title-text {
-  font-family: "Klarheit Grotesk Regular", sans-serif;
+  font-family: "Klarheit Grotesk Regular";
   font-size: 5.5vw !important;
   margin: 0;
   box-sizing: border-box !important;
-}
-.k2-title-span {
-  font-family: "Klarheit Grotesk Regular", sans-serif;
-  font-size: 5.5vw !important;
-  margin: 0;
-  line-height: normal !important;
+  line-height: 1.1 !important;
 }
 .k2-title-text-small {
-  font-family: "Klarheit Grotesk Regular", sans-serif;
+  font-family: "Klarheit Grotesk Regular";
   font-size: 5vw !important;
   margin: 0;
 }
@@ -56,25 +51,22 @@
 
 @media screen and (min-width: 400px) {
   .k2-title-h1-bold {
-    font-size: 2.5rem !important;
+    font-size: 3rem !important;
   }
   .k2-title-h1 {
-    font-size: 2.5rem !important;
+    font-size: 3rem !important;
   }
   .k2-title-h2 {
     font-size: 2rem !important;
   }
   .k2-title-h3 {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
   }
   .k2-title-h3-bold {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
   }
   .k2-title-text {
-    font-size: 1rem !important;
-  }
-  .k2-title-span {
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
   }
   .k2-title-text-small {
     font-size: 1rem !important;

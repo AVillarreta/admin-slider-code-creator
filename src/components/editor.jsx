@@ -171,6 +171,8 @@ const form = (element, ind) => {
         <option value="p">p</option>
         <option value="image">image</option>
         <option value="canvas">Canvas</option>
+        <option value="ul">Ul</option>
+        <option value="li">Li</option>
 
         <option value="list">list</option>
       </select>

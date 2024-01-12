@@ -21,15 +21,6 @@ h1:first-child {
   color: #333333;
   font-family: Klarheit Grotesk Regular, sans-serif;
 }
-.preview-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(0, 0, 0, 0.8);
-}
 .preview-container * {
   margin: 0;
 }
@@ -149,4 +140,40 @@ option {
 }
 .json::-webkit-scrollbar {
   display: none;
+}
+
+.li-green {
+  margin: 5px 0;
+  color: #00a; /* Color del texto */
+  position: relative;
+  padding-left: 20px; /* Espacio para la viñeta */
+}
+
+.li-green::before {
+  content: "\2022"; /* Código Unicode para el carácter de viñeta (puedes usar otros caracteres) */
+  color: #0ef; /* Color de la viñeta */
+  position: absolute;
+  left: 0;
+}
+.li-white {
+  margin: 5px 0;
+  color: #00a; /* Color del texto */
+  position: relative;
+  padding-left: 20px; /* Espacio para la viñeta */
+}
+
+.li-white::before {
+  content: "\2022"; /* Código Unicode para el carácter de viñeta (puedes usar otros caracteres) */
+  color: #fff; /* Color de la viñeta */
+  position: absolute;
+  left: 0;
+}
+
+.k2-list-item {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  gap: 0.5rem;
+}
+.k2-list-item > img:first-child {
+  margin-top: 0.2rem;
 }
